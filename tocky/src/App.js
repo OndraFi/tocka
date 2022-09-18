@@ -165,10 +165,10 @@ function App() {
                     height={"100px"}
                     style={{border: "1px solid white", imageRendering: "pixelated"}}>
             </canvas>
-            <button className={"btn btn-danger mb-5"}
+            <button className={"btn btn-danger text-uppercase mb-5"}
                     onClick={async () => {
                         create();
-                    }}>TWISTED!!
+                    }}>Spin it!!
             </button>
         </div>
         </div>
