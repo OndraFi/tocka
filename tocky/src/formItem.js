@@ -1,9 +1,7 @@
 import React, {useState} from "react";
-import randomColor from "randomcolor";
 
 export default function FormItem(props){
     const pocet = props.pocet;
-    const color = hexRgb(props.item.color);
 
     return(
         <div className={"d-flex justify-content-around align-items-center p-5 my-3 mx-2"} style={{}}>
