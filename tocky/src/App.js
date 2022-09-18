@@ -122,6 +122,18 @@ function App() {
         console.log(form);
     }
 
+    const TextOnChange = (index, e) => {
+        var list = [...form];
+        list[index].text = e.target.value;
+        setForm(list);
+    }
+
+    const ColorOnChange = (index, e) => {
+        var list = [...form];
+        list[index].color = e.target.value;
+        setForm(list);
+    }
+
     useEffect(() => {
         const canvas = document.getElementById("canvas");
         const container = document.getElementById("container");
@@ -142,7 +154,8 @@ function App() {
              id={"container"}>
             <form id={"form"} action="" className={"my-5 mx-2 w-100"}>
                 {form.map((item, index) => (
-                    <FormItem key={index} pocet={index} item={item} delete={deleteFromForm}></FormItem>
+                    <FormItem key={index} pocet={index} item={item} delete={deleteFromForm}
+                              textChange={TextOnChange} colorChange={ColorOnChange}></FormItem>
                 ))}
                 <div className={"btn btn-danger my-4 rounded-circle"} onClick={addToForm}><span>+</span></div>
 
